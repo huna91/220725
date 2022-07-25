@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="post">
+      <label>id</label>
+      <!-- 수정하는 값이 아니니 readonly 또는 disabled 조건을 준다. -->
+      <input type="text" name="id" value="<%=data.id %>" readonly />
+      <label>이름</label>
+      <input type="text" name="name" value="<%=data.name %>" />
+      <label>전화번호</label>
+      <input type="text" name="number" value="<%=data.number %>" />
+      <label>시리즈</label>
+      <input type="text" name="series" value="<%=data.series %>" />
+      <button type="submit">수정</button>
+    </form>
+  </body>
+</html>

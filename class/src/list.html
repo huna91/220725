@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리스트 페이지</title>
+  </head>
+  <body>
+    <table style="width: 100%">
+      <h1>테이블1</h1>
+      <a href="/insert">추가 페이지</a>
+      <tr>
+        <th>삭제</th>
+        <th>수정</th>
+        <th>아이디</th>
+        <th>이름</th>
+        <th>전화번호</th>
+        <th>시리즈</th>
+      </tr>
+      <% data.forEach(function(el, index){%>
+      <tr>
+        <td>
+          <button type="submit" id="delete_btn">
+            <a href="/delete/<%= el.id %>">삭제</a>
+          </button>
+        </td>
+        <td>
+          <button type="submit" id="edit_btn">
+            <a href="/edit/<%=el.id %>"> 수정</a>
+          </button>
+        </td>
+        <!-- ejs문법 -->
+        <td><%= el.id %></td>
+        <td><%= el.name %></td>
+        <td><%= el.number %></td>
+        <td><%= el.series %></td>
+      </tr>
+      <% }); %>
+      <!-- <form method="post">
+        <input type="text" value="이름" />
+        <input type="text" value="전화번호" />
+        <input type="text" value="시리즈" />
+      </form> -->
+    </table>
+    <table style="width: 100%">
+      <h1>테이블2</h1>
+      <a href="/insert">추가 페이지</a>
+      <tr>
+        <th>삭제</th>
+        <th>수정</th>
+        <th>아이디</th>
+        <th>이름</th>
+        <th>전화번호</th>
+        <th>시리즈</th>
+      </tr>
+      <% data.forEach(function(el, index){%>
+      <tr>
+        <td>
+          <button type="submit" id="delete_btn">
+            <a href="/delete/<%= el.id %>">삭제</a>
+          </button>
+        </td>
+        <td>
+          <button type="submit" id="edit_btn">
+            <a href="/edit/<%=el.id %>"> 수정</a>
+          </button>
+        </td>
+        <!-- ejs문법 -->
+        <td><%= el.id %></td>
+        <td><%= el.name %></td>
+        <td><%= el.number %></td>
+        <td><%= el.series %></td>
+      </tr>
+      <% }); %>
+      <!-- <form method="post">
+        <input type="text" value="이름" />
+        <input type="text" value="전화번호" />
+        <input type="text" value="시리즈" />
+      </form> -->
+    </table>
+  </body>
+  <script>
+    let a = [];
+    a.forEach(function (el, index) {});
+  </script>
+</html>
